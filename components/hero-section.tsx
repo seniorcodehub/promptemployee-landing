@@ -3,7 +3,6 @@
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import { Button } from "@/components/ui/button";
 import { useContactModal } from "@/components/ui/contact-modal";
-import { Play } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 
 export function HeroSection() {
@@ -23,22 +22,13 @@ export function HeroSection() {
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto font-medium">
               {t("hero_desc")}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+            <div className="flex justify-center items-center pt-4">
               <Button
                 size="lg"
                 className="bg-[#ef4444] hover:bg-[#dc2626] text-white px-8 py-6 text-lg font-semibold rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
                 onClick={() => contact.open()}
               >
                 {t("hero_cta_primary")}
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-gray-300 hover:border-[#ef4444] text-gray-700 hover:text-[#ef4444] px-8 py-6 text-lg font-semibold rounded-lg transition-all duration-200"
-                onClick={() => contact.open()}
-              >
-                <Play className="mr-2 h-5 w-5" />
-                {t("hero_cta_secondary")}
               </Button>
             </div>
           </div>
@@ -58,4 +48,3 @@ export function HeroSection() {
     </section>
   );
 }
-
